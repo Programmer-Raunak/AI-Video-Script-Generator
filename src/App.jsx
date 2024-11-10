@@ -19,7 +19,7 @@ const App = () => {
     }
     else {
       setLoader(true);
-      const genAI = new GoogleGenerativeAI("YOUR API KEY ");
+      const genAI = new GoogleGenerativeAI("7dd9b1ba987846578bd1284c27ffa488");
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       const result = await model.generateContent(`Give a complete video script for the video which is ${prompt}`);
       setRes(result.response.text());
